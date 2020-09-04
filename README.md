@@ -1,6 +1,6 @@
 # README
 
-First re-factor of original fnBuilder site
+First re-factor of original fnBuilder site, pulling in original code and will then refactor piece by piece.
 
 - Ruby 2.6.5
 
