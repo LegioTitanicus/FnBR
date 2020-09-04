@@ -3,24 +3,11 @@
 <head>
   <title>FnBRefactor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
   <%= csrf_meta_tags %>
 </head>
 <body>
   
-  <nav class="top-bar">
-    <h1><a href="/">FnBRefactor</a></h1>
-
-    <section class="top-bar-section">
-      <ul class="right">
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
-  </nav>
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
@@ -40,5 +27,19 @@
   <%= javascript_pack_tag 'application' %>
   
   <%= yield :extra_footer %>
+  <nav class="top-bar" style="display: none;">
+    <h1><a href="/">FnBuilder</a></h1>
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <%- if current_user -%>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, id: "sign_out", method: :delete %></li>
+        <%- else -%>
+          <li><%= link_to 'Sign Up', new_user_registration_path, id: "sign_up"%></li>
+          <li><%= link_to 'Sign In', new_user_session_path, id: "sign_in"%></li>
+        <%- end -%>
+      </ul>
+    </section>
+  </nav>
 </body>
 </html>
