@@ -11,12 +11,16 @@ class Api::V1::SubmissionsController < ApplicationController
     end
     
     def index
-        user_subs = current_user.submissions
-        render json: user_subs
+        rand_record = Submission.all.sample
+        # binding.pry
+        render json: rand_record
+        # user_subs = current_user.submissions
+        # render json: user_subs
     end 
 
     def show
         rand_record = Submission.all.sample
+        binding.pry
         render json: rand_record
     end
 

@@ -1,6 +1,7 @@
 # README
 
 First re-factor of original fnBuilder site, pulling in original code and will then refactor piece by piece.
+WIP
 
 - Ruby 2.6.5
 
