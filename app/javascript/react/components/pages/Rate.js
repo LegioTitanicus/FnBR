@@ -52,8 +52,9 @@ const Rate = () => {
       })
       .then((response) => response.json())
       .then((body) => {
-        setCodeBlock(body.submission.codeBlock);
-        setTranslationField(body.submission.translation);
+        debugger;
+        setCodeBlock(body.codeBlock);
+        setTranslationField(body.translation);
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   };
