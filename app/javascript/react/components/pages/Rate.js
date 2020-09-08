@@ -52,7 +52,6 @@ const Rate = () => {
       })
       .then((response) => response.json())
       .then((body) => {
-        debugger;
         setCodeBlock(body.codeBlock);
         setTranslationField(body.translation);
       })
